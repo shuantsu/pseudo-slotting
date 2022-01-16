@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Chakra Petch', sans-serif;
+}
+header {
+  font-size: 36pt;
+  text-align: center;
+  background-color: #eee;
+  padding: 30px;
+  font-family: 'Sedgwick Ave', cursive;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+  grid-gap: 6px;
+  margin: 8px;
+}
+.case {
+  border: 1px solid skyblue;
+  border-radius: 8px;
+  text-align: center;
+  margin: 5px;
+  padding: 8px;
+  vertical-align: middle;
+}
+.destaque {
+  color: blue;
+}
+img {
+  margin: 7px;
+}
+body {
+  counter-reset: h1counter;
+}
+h1:before {
+  content: counter(h1counter) " - ";
+  counter-increment: h1counter;
+}
+.case p {
+  font-size: 12pt;
+}
+@media print {
+  .group {page-break-inside: avoid;}
+}
+.controls {
+  padding: 14px;
+}
+.controls {
+  position: sticky;
+  top: 0;
+  background:  #eee;
+}
